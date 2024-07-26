@@ -1,0 +1,18 @@
+{
+  "name": "quick-app",
+  "version": "1.0.0",
+  "description": "Starter files and directories for an express application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khaled Md Saifullah",
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "expressjs",
+    "mern",
+    "starter-files"
+  ],
+  "license": "MIT"
+}
