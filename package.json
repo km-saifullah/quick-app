@@ -1,8 +1,16 @@
 {
   "name": "quick-app",
   "version": "1.0.0",
-  "description": "Starter files and directories for an express application",
+  "description": "Starter files & directories for an express application",
   "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/km-saifullah/quick-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/km-saifullah/quick-app/issues"
+  },
+  "homepage": "https://github.com/km-saifullah/quick-app",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
