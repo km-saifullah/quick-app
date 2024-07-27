@@ -1,21 +1,25 @@
-const fs = require("fs");
+const createDirectory = require("./createDirectory");
+const createFile = require("./createFile");
 
-fs.writeFileSync(
+// create .env file
+createFile(
   "./.env",
   `PORT=8000 
 DATABASE_URL=your-mongodb-url`
 );
 
-fs.mkdirSync("./src", { recursive: false });
-fs.mkdirSync("./src/controllers", { recursive: false });
-fs.mkdirSync("./src/models", { recursive: false });
-fs.mkdirSync("./src/db", { recursive: false });
-fs.mkdirSync("./src/routes", { recursive: false });
-fs.mkdirSync("./src/middlewares", { recursive: false });
-fs.mkdirSync("./src/config", { recursive: false });
-fs.mkdirSync("./src/utils", { recursive: false });
+// make directories
+createDirectory("./src");
+createDirectory("./src/controllers");
+createDirectory("./src/models");
+createDirectory("./src/db");
+createDirectory("./src/routes");
+createDirectory("./src/middlewares");
+createDirectory("./src/config");
+createDirectory("./src/utils");
 
-fs.writeFileSync(
+// make files
+createFile(
   "./src/server.js",
   `const app = require("./app.js")
 const connectDb = require("./db/connectDb")
@@ -27,7 +31,7 @@ connectDb()
 app.listen(serverPort, () => console.log("Server is running"))`
 );
 
-fs.writeFileSync(
+createFile(
   "./src/app.js",
   `const express = require("express")
 
@@ -40,7 +44,7 @@ app.use(express.urlencoded({extended:true}))
 module.exports = app`
 );
 
-fs.writeFileSync(
+createFile(
   "./src/config/index.js",
   `const { configDotenv } = require("dotenv")
 
@@ -52,7 +56,7 @@ const dbUrl = process.env.DATABASE_URL
 module.exports = { serverPort, dbUrl }`
 );
 
-fs.writeFileSync(
+createFile(
   "./src/db/connectDb.js",
   `const mongoose = require("mongoose")
 const dbUrl = require("./../config/index")
@@ -68,7 +72,7 @@ const connectDb = async () => {
 module.exports = connectDb`
 );
 
-fs.writeFileSync(
+createFile(
   "./.prettierrc",
   `{
   "tabWidth": 2,
@@ -79,7 +83,8 @@ fs.writeFileSync(
   "bracketSpacing": true
 }`
 );
-fs.writeFileSync(
+
+createFile(
   "./.prettierignore",
   `/.vscode
 /node modules
@@ -88,7 +93,8 @@ fs.writeFileSync(
 .env
 .env.*`
 );
-fs.writeFileSync(
+
+createFile(
   "./.gitignore",
   `# Logs
 logs
@@ -159,7 +165,7 @@ web_modules/
 );
 
 console.log(`Great Job 👏 Start Writing Code in your new Express App
-⚠️ Before Writing Code: you need to install packages below:
+⚠️ Before Writing Code | you need to install packages below:
 1. express
 2. dotenv
 3. mongoose
