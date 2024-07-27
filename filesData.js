@@ -1,7 +1,7 @@
 // server.js data
 const serverCode = `const app = require("./app.js")
 const connectDb = require("./db/connectDb")
-const serverPort = require("./config/index")
+const { serverPort } = require('./config/index')
 
 // connect database
 connectDb()
@@ -31,7 +31,7 @@ module.exports = { serverPort, dbUrl }`;
 
 // connectDB data
 const dbConnectionCode = `const mongoose = require("mongoose")
-const dbUrl = require("./../config/index")
+const { dbUrl } = require('./../config/index')
 
 const connectDb = async () => {
   try {
