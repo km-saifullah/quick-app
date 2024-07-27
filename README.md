@@ -14,9 +14,9 @@ Starter files and directories for an express application. Using this package you
 
 2.  Use this package in your project
 
-    a. Create a javascript file in your root directory as main.js
+    a. Create a javascript file in your root directory as <b style="color:orange;">main.js</b>
 
-    b. Now write the code below to main.js file
+    b. Now write the code below to <b style="color:orange;">main.js</b> file
 
     ```javascript
     const server = require("quick-app");
@@ -27,7 +27,7 @@ Starter files and directories for an express application. Using this package you
 
     c. Finally run the main.js file `node main.js`
 
-Now you are ready to build your own express application according to your needs.
+Now you are ready to build your own express application according to your need.
 
 Happy Coding...👍
 
