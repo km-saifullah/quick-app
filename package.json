@@ -11,9 +11,7 @@
     "url": "https://github.com/km-saifullah/quick-app/issues"
   },
   "homepage": "https://github.com/km-saifullah/quick-app",
-  "scripts": {
-    "postinstall": "node server.js"
-  },
+  "scripts": {},
   "author": "Khaled Md Saifullah",
   "keywords": [
     "javascript",
