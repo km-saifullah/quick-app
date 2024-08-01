@@ -1,6 +1,6 @@
 {
   "name": "quick-app",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Starter files & directories for an express application",
   "main": "server.js",
   "repository": {
