@@ -18,7 +18,7 @@ Starter files and directories for an express application. Using this package you
 2.  Use this package in your project
 
     a. Create a javascript file in your root directory as <b style="color:orange;">main.js</b>
-    b. Change your package.json file
+    b. Change in your package.json file
 
     ```javascript
     {
@@ -31,6 +31,8 @@ Starter files and directories for an express application. Using this package you
     ```javascript
     import server from "quick-app";
     import fs from "fs";
+
+    server();
 
     fs.unlinkSync("./main.js");
     ```

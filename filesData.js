@@ -1,6 +1,6 @@
 // server.js data
 const serverCode = `import app from "./app.js"
-const connectDb from "./db/connectDb.js"
+import connectDb from "./db/connectDb.js"
 import { serverPort } from './config/index.js'
 
 // connect database
@@ -31,7 +31,7 @@ export { serverPort, dbUrl }`;
 
 // connectDB data
 const dbConnectionCode = `import mongoose from "mongoose"
-import { dbUrl } from './../config/index'
+import { dbUrl } from './../config/index.js'
 
 const connectDb = async () => {
   try {
