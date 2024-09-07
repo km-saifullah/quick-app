@@ -36,3 +36,5 @@ console.log(`Great Job 👏 Start Writing Code in your new Express App
 ⚠️ Before Writing Code | you need to install packages below:
 ##### install the packages below ####
 npm install express mongoose dotenv`);
+
+export default server;
