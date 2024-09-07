@@ -1,7 +1,7 @@
 // server.js data
-const serverCode = `const app = require("./app.js")
-const connectDb = require("./db/connectDb")
-const { serverPort } = require('./config/index')
+const serverCode = `import app from "./app.js"
+const connectDb from "./db/connectDb.js"
+import { serverPort } from './config/index.js'
 
 // connect database
 connectDb()
@@ -9,7 +9,7 @@ connectDb()
 app.listen(serverPort, () => console.log("Server is running"))`;
 
 // app.js data
-const appCode = `const express = require("express")
+const appCode = `import express from "express"
 
 const app = express();
 
@@ -17,21 +17,21 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-module.exports = app`;
+export default app`;
 
 // config data
-const configCode = `const { configDotenv } = require("dotenv")
+const configCode = `import { configDotenv } from "dotenv"
 
 configDotenv()
 
-const serverPort = process.env.PORT
+const serverPort = process.env.PORT || 8000
 const dbUrl = process.env.DATABASE_URL
 
-module.exports = { serverPort, dbUrl }`;
+export { serverPort, dbUrl }`;
 
 // connectDB data
-const dbConnectionCode = `const mongoose = require("mongoose")
-const { dbUrl } = require('./../config/index')
+const dbConnectionCode = `import mongoose from "mongoose"
+import { dbUrl } from './../config/index'
 
 const connectDb = async () => {
   try {
@@ -41,7 +41,7 @@ const connectDb = async () => {
     console.log(error.message)
   }
 }
-module.exports = connectDb`;
+export default connectDb`;
 
 // prettierrc data
 const prettierCode = `{
@@ -129,7 +129,7 @@ web_modules/
 .yarn/install-state.gz
 .pnp.*`;
 
-module.exports = {
+export {
   serverCode,
   appCode,
   configCode,

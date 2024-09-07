@@ -1,7 +1,7 @@
-const fs = require("fs");
+import fs from "fs";
 
 const createFile = (fileName, data) => {
   return fs.writeFileSync(fileName, data);
 };
 
-module.exports = createFile;
+export default createFile;

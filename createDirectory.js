@@ -1,7 +1,7 @@
-const fs = require("fs");
+import fs from "fs";
 
 const createDirectory = (filePath) => {
   return fs.mkdirSync(filePath, { recursive: false });
 };
 
-module.exports = createDirectory;
+export default createDirectory;

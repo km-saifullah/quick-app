@@ -28,7 +28,7 @@ Starter files and directories for an express application. Using this package you
     fs.unlinkSync("./main.js");
     ```
 
-    c. Finally run the main.js file
+    c. Finally run the <b>main.js</b> file
 
     ```bash
     node main.js

@@ -1,6 +1,6 @@
-const createDirectory = require("./createDirectory");
-const createFile = require("./createFile");
-const {
+import createDirectory from "./createDirectory.js";
+import createFile from "./createFile.js";
+import {
   serverCode,
   appCode,
   configCode,
@@ -8,14 +8,10 @@ const {
   prettierCode,
   prettyIgnoreCode,
   gitIgnoreCode,
-} = require("./filesData");
+} from "./filesData.js";
 
 // create .env file
-createFile(
-  "./.env",
-  `PORT=8000 
-DATABASE_URL=your-mongodb-url`
-);
+createFile("./.env", `DATABASE_URL=your-mongodb-url`);
 
 // make directories
 createDirectory("./src");
@@ -38,8 +34,5 @@ createFile("./.gitignore", gitIgnoreCode);
 
 console.log(`Great Job 👏 Start Writing Code in your new Express App
 ⚠️ Before Writing Code | you need to install packages below:
-1. express
-2. dotenv
-3. mongoose
-##### use the command below in the terminal in your project ####
+##### install the packages below ####
 npm install express mongoose dotenv`);

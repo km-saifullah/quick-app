@@ -3,6 +3,7 @@
   "version": "1.0.4",
   "description": "Starter files & directories for an express application",
   "main": "server.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/km-saifullah/quick-app.git"
@@ -11,7 +12,9 @@
     "url": "https://github.com/km-saifullah/quick-app/issues"
   },
   "homepage": "https://github.com/km-saifullah/quick-app",
-  "scripts": {},
+  "scripts": {
+    "postinstall": ""
+  },
   "author": "Khaled Md Saifullah",
   "keywords": [
     "javascript",
